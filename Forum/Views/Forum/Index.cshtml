@@ -1,0 +1,20 @@
+﻿@model Forum.Models.IndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Simple forum</h2>
+<hr />
+<table class="table">
+
+    @foreach (var item in Model.Boards)
+    {
+        <tr>
+            <td>
+                @Html.Partial("_BoardBox", item)
+            </td>
+        </tr>
+    }
+
+</table>

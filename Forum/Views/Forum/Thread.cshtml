@@ -1,0 +1,26 @@
+﻿@model Forum.Models.ThreadViewModel
+
+@{
+    ViewBag.Title = "Thread";
+}
+
+<h2>@Model.Name</h2>
+<hr />
+
+<p>
+    @Html.ActionLink("Reply", "NewPost", new { id = Model.Id }, new { @class = "actionlink" })
+</p>
+<table class="table">
+
+@foreach (var item in Model.Posts) {
+    <tr>
+        <td>
+            @Html.Partial("_PostBox", item)
+        </td>
+    </tr>
+}
+</table>
+
+<p>
+    @Html.ActionLink("Reply", "NewPost", new { id = Model.Id }, new { @class = "actionlink" })
+</p>

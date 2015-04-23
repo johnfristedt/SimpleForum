@@ -1,0 +1,15 @@
+﻿@model Forum.Models.BoardBoxViewModel
+
+<div>
+    <dl class="dl-horizontal box">
+        <dd>
+            @Html.ActionLink(Model.Name, "Board", new { id = Model.Id })
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+

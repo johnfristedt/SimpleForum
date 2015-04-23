@@ -1,0 +1,10 @@
+﻿@model Forum.Models.ThreadBoxViewModel
+
+<div>
+    <dl class="dl-horizontal box">
+        <dd>
+            @Html.ActionLink(Model.Title, "Thread", new { id = Model.Id })
+        </dd>
+        <dt class="lastPost">Last post by <b>@Model.LastPoster</b> at @Model.LastPostTime</dt>
+    </dl>
+</div>

@@ -1,0 +1,18 @@
+﻿@model Forum.Models.PostBoxViewModel
+
+<div>
+    <hr />
+
+    <dl class="dl-horizontal">
+        <dd class="posterName">
+            Posted by: @Model.Author
+        </dd>
+        <dd class="postTime">
+            @Model.Time
+        </dd>
+        <dd class="postContent">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+
+    </dl>
+</div>

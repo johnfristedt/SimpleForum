@@ -1,0 +1,25 @@
+﻿@model Forum.Models.BoardViewModel
+
+@{
+    ViewBag.Title = "Board";
+}
+
+<h2>@Model.Name</h2>
+<hr />
+
+<p>
+    @Html.ActionLink("New thread", "NewThread", new { id = TempData["BoardId"] }, new { @class = "actionlink" })
+</p>
+
+<table class="table">
+
+@foreach (var item in Model.Threads)
+{
+    <tr>
+        <td>
+            @Html.Partial("_ThreadBox", item)
+        </td>
+    </tr>
+}
+
+</table>
